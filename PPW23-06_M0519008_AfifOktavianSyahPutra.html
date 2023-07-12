@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Week 6</title>
+  <style>
+    .chessboard {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .chessboard .square {
+      width: 50px;
+      height: 50px;
+    }
+
+    .chessboard .yellow {
+      background-color: yellow;
+    }
+
+    .chessboard .black {
+      background-color:black;
+    }
+
+    .chessboard .stair {
+      background-color:white;
+    }
+  </style>
+</head>
+<body>
+  <div class="chessboard">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var chessboard = document.querySelector(".chessboard");
+
+      for (var j = 0; j < 5; j++) {
+        for (var i = 4; i >= 0; i--) {
+          var square = document.createElement("div");
+          square.classList.add("square");
+          
+          if (i >= j) {
+            square.classList.add((i + j) % 2 === 0 ? "yellow" : "black");
+          } else {
+            square.classList.add("stair");
+          }
+          
+          chessboard.appendChild(square);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

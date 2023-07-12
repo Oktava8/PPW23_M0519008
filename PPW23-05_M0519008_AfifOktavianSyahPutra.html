@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>Afif Oktavian's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Afif Oktavian</h1>
+      <p>A web developer and designer based in Indonesia</p>
+    </div>
+    <div class="skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>Bootstrap</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+    <div class="portfolio">
+      <h2>My Portfolio</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="project1.jpg" alt="Project 1">
+          <p>A responsive landing page for a travel agency</p>
+          <a href="https://example.com/project1" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+          <img src="project2.jpg" alt="Project 2">
+          <p>A dynamic quiz app with jQuery and AJAX</p>
+          <a href="https://example.com/project2" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+          <img src="project3.jpg" alt="Project 3">
+          <p>A simple blog website with PHP and MySQL</p>
+          <a href="https://example.com/project3" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2023 by Afif Oktavian. All rights reserved.</p>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/afif.oktavian" target="_blank"><img src="facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://www.twitter.com/afif_oktavian" target="_blank"><img src="twitter.png" alt="Twitter"></a></li>
+        <li><a href="https://www.linkedin.com/in/afif-oktavian" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- jQuery code to make the header sticky -->
+  <script>
+    $(document).ready(function() {
+      var header = $(".header");
+      var headerHeight = header.outerHeight();
+      var offset = header.offset().top;
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > offset) {
+          header.addClass("sticky");
+          $("body").css("padding-top", headerHeight + "px");
+        } else {
+          header.removeClass("sticky");
+          $("body").css("padding-top", "0");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
